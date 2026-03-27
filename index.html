@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title id="pgTitle">ATUL YADAV — Café</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <style>
 :root{--bg:#0a0a0a;--surface:#111;--card:#181818;--border:#2a2a2a;--gold:#c9a84c;--gold2:#e8c97a;--text:#f0ede6;--muted:#888;--green:#25d366;--red:#e74c3c;--radius:14px;}
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -41,8 +40,6 @@ nav{background:rgba(10,10,10,0.95);backdrop-filter:blur(12px);position:sticky;to
 .section{max-width:1100px;margin:auto;padding:60px 20px;}
 .section-title{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,42px);font-weight:700;margin-bottom:8px;}
 .section-sub{color:var(--muted);font-size:14px;margin-bottom:40px;}
-
-/* MOOD */
 .mood-box{background:linear-gradient(135deg,#0f0a00,#1a1408);border:1px solid var(--gold);border-radius:20px;padding:24px;margin-bottom:30px;}
 .mood-box h3{font-family:'Playfair Display',serif;font-size:20px;color:var(--gold);margin-bottom:6px;}
 .mood-box p{color:var(--muted);font-size:13px;margin-bottom:16px;}
@@ -54,8 +51,6 @@ nav{background:rgba(10,10,10,0.95);backdrop-filter:blur(12px);position:sticky;to
 .mood-chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;}
 .mood-chip{background:#1a1408;border:1px solid var(--gold);color:var(--gold2);font-size:12px;padding:6px 14px;border-radius:20px;cursor:pointer;}
 .mood-chip:hover{background:var(--gold);color:#000;}
-
-/* SEARCH */
 .search-wrap{position:relative;margin-bottom:24px;}
 .search-input{width:100%;background:var(--card);border:1px solid var(--border);border-radius:50px;padding:14px 20px 14px 50px;color:var(--text);font-size:15px;font-family:'DM Sans',sans-serif;transition:.2s;}
 .search-input:focus{outline:none;border-color:var(--gold);}
@@ -82,8 +77,6 @@ nav{background:rgba(10,10,10,0.95);backdrop-filter:blur(12px);position:sticky;to
 .badge-veg{position:absolute;top:10px;left:10px;background:#1a3a1a;color:#4caf50;font-size:10px;padding:3px 8px;border-radius:4px;border:1px solid #4caf50;}
 .badge-nonveg{position:absolute;top:10px;left:10px;background:#3a1a1a;color:#e74c3c;font-size:10px;padding:3px 8px;border-radius:4px;border:1px solid #e74c3c;}
 .badge-special{position:absolute;top:10px;right:10px;background:var(--gold);color:#000;font-size:10px;padding:3px 8px;border-radius:4px;font-weight:700;}
-
-/* SPIN WHEEL */
 .spin-section{background:linear-gradient(135deg,#0a0020,#1a0a30);border:1px solid #9b59b6;border-radius:20px;padding:28px;text-align:center;}
 .spin-section h3{font-family:'Playfair Display',serif;font-size:22px;color:#c39bd3;margin-bottom:6px;}
 .spin-section p{color:var(--muted);font-size:13px;margin-bottom:20px;}
@@ -94,8 +87,6 @@ canvas#wheelCanvas{border-radius:50%;box-shadow:0 0 30px rgba(155,89,182,0.4);}
 .spin-btn:hover{transform:scale(1.05);}
 .spin-btn:disabled{opacity:.5;cursor:not-allowed;}
 .spin-result{margin-top:16px;padding:14px 20px;background:#1a0a30;border:1px solid #9b59b6;border-radius:12px;display:none;font-size:15px;color:#c39bd3;}
-
-/* AI CHATBOT */
 .chat-fab{position:fixed;bottom:24px;right:20px;width:56px;height:56px;background:linear-gradient(135deg,var(--gold),var(--gold2));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;cursor:pointer;z-index:300;box-shadow:0 4px 20px rgba(201,168,76,0.4);border:none;transition:.2s;}
 .chat-fab:hover{transform:scale(1.1);}
 .chat-win{position:fixed;bottom:90px;right:20px;width:320px;max-height:460px;background:var(--surface);border:1px solid var(--border);border-radius:20px;z-index:300;display:none;flex-direction:column;box-shadow:0 10px 40px rgba(0,0,0,0.6);}
@@ -116,8 +107,6 @@ canvas#wheelCanvas{border-radius:50%;box-shadow:0 0 30px rgba(155,89,182,0.4);}
 .chat-in{flex:1;background:#1f1f1f;border:1px solid var(--border);border-radius:20px;padding:8px 14px;color:var(--text);font-size:13px;font-family:'DM Sans',sans-serif;}
 .chat-in:focus{outline:none;border-color:var(--gold);}
 .chat-send{background:var(--gold);color:#000;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:14px;}
-
-/* OFFERS */
 .offers-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;}
 .offer-card{background:linear-gradient(135deg,#1a0a00,#2d1500);border:1px solid #c9a84c55;border-radius:var(--radius);padding:24px;position:relative;overflow:hidden;}
 .offer-card::before{content:'🎉';position:absolute;right:16px;top:16px;font-size:36px;opacity:.3;}
@@ -174,6 +163,7 @@ canvas#wheelCanvas{border-radius:50%;box-shadow:0 0 30px rgba(155,89,182,0.4);}
 .order-form .form-input:focus{outline:none;border-color:var(--gold);}
 .loc-btn{background:#1a3a2a;border:1px solid var(--green);color:var(--green);padding:10px 16px;border-radius:8px;cursor:pointer;font-size:13px;width:100%;margin-bottom:10px;display:flex;align-items:center;justify-content:center;gap:8px;}
 .loc-status{font-size:12px;color:var(--muted);margin-bottom:10px;text-align:center;}
+/* ADMIN */
 .admin-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:1000;align-items:center;justify-content:center;padding:20px;}
 .admin-modal.open{display:flex;}
 .admin-panel{background:var(--surface);border:1px solid var(--border);border-radius:20px;width:100%;max-width:780px;max-height:90vh;overflow-y:auto;}
@@ -212,9 +202,11 @@ canvas#wheelCanvas{border-radius:50%;box-shadow:0 0 30px rgba(155,89,182,0.4);}
 .loading{text-align:center;padding:40px;color:var(--muted);}
 .spinner{display:inline-block;width:30px;height:30px;border:3px solid var(--border);border-top-color:var(--gold);border-radius:50%;animation:spin .8s linear infinite;}
 @keyframes spin{to{transform:rotate(360deg)}}
-.qr-box{display:inline-block;background:#fff;padding:20px;border-radius:16px;margin:20px auto;}
 footer{border-top:1px solid var(--border);text-align:center;padding:30px 20px;color:var(--muted);font-size:13px;}
 footer span{color:var(--gold);}
+/* ADMIN FLOATING BUTTON */
+.admin-fab{position:fixed;bottom:90px;left:20px;width:44px;height:44px;background:var(--card);border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;cursor:pointer;z-index:299;opacity:0.3;transition:.2s;}
+.admin-fab:hover{opacity:1;border-color:var(--gold);}
 @media(max-width:600px){.form-row{grid-template-columns:1fr;}.location-card{flex-direction:column;}.nav-links{display:none;}.chat-win{width:calc(100vw - 40px);}}
 </style>
 </head>
@@ -236,10 +228,12 @@ footer span{color:var(--gold);}
     </div>
     <div style="display:flex;align-items:center;gap:10px;">
       <button class="cart-btn" onclick="openCart()">🛒 <span class="cart-count" id="cartCount">0</span></button>
-      <button style="background:transparent;border:none;cursor:pointer;opacity:0;width:24px;height:24px;" onclick="openAdmin()"></button>
     </div>
   </div>
 </nav>
+
+<!-- Admin FAB - click 3 times to open -->
+<button class="admin-fab" id="adminFab" title="Admin" onclick="adminFabClick()">⚙️</button>
 
 <div class="hero">
   <div class="hero-badge" id="heroBadge">Premium Café Experience</div>
@@ -257,17 +251,16 @@ footer span{color:var(--gold);}
 <section class="section" id="menu">
   <div class="section-title">Our Menu</div>
   <div class="section-sub">Items add karo cart mein!</div>
-  <!-- MOOD -->
   <div class="mood-box">
     <h3>😋 Aaj ka Mood Kya Hai?</h3>
     <p>Apna mood batao — main suggest karunga kya order karo!</p>
     <div class="mood-btns">
-      <button class="mood-btn" onclick="getMoodSuggest('happy','🥳 Khush')">🥳 Khush</button>
-      <button class="mood-btn" onclick="getMoodSuggest('tired','😴 Thaka hua')">😴 Thaka hua</button>
-      <button class="mood-btn" onclick="getMoodSuggest('hungry','😋 Bahut Bhookh')">😋 Bahut Bhookh</button>
-      <button class="mood-btn" onclick="getMoodSuggest('chill','😎 Chill')">😎 Chill</button>
-      <button class="mood-btn" onclick="getMoodSuggest('work','💻 Kaam Karna')">💻 Kaam Karna</button>
-      <button class="mood-btn" onclick="getMoodSuggest('date','💕 Date pe')">💕 Date pe</button>
+      <button class="mood-btn" onclick="getMoodSuggest('happy',this)">🥳 Khush</button>
+      <button class="mood-btn" onclick="getMoodSuggest('tired',this)">😴 Thaka hua</button>
+      <button class="mood-btn" onclick="getMoodSuggest('hungry',this)">😋 Bahut Bhookh</button>
+      <button class="mood-btn" onclick="getMoodSuggest('chill',this)">😎 Chill</button>
+      <button class="mood-btn" onclick="getMoodSuggest('work',this)">💻 Kaam Karna</button>
+      <button class="mood-btn" onclick="getMoodSuggest('date',this)">💕 Date pe</button>
     </div>
     <div class="mood-result" id="moodResult">
       <p id="moodText"></p>
@@ -347,7 +340,7 @@ footer span{color:var(--gold);}
       <input class="form-input" id="reviewName" placeholder="Your Name">
       <input class="form-input" id="reviewPhone2" placeholder="Phone (optional)">
     </div>
-    <div class="star-select">
+    <div class="star-select" id="starSelect">
       <button class="star-btn active" onclick="setStars(1)">★</button>
       <button class="star-btn active" onclick="setStars(2)">★</button>
       <button class="star-btn active" onclick="setStars(3)">★</button>
@@ -357,13 +350,6 @@ footer span{color:var(--gold);}
     <textarea class="form-input" id="reviewText" rows="3" placeholder="Share your experience..." style="resize:vertical;margin-bottom:14px;"></textarea>
     <button class="btn btn-gold" onclick="submitReview()">Submit Review</button>
   </div>
-</section>
-
-<section class="section" id="qr" style="text-align:center;">
-  <div class="section-title">Menu QR Code</div>
-  <div class="qr-box"><div id="qrcode"></div></div>
-  <p style="color:var(--muted);font-size:13px;margin-bottom:16px;">Scan to view menu</p>
-  <button class="btn btn-gold" onclick="downloadQR()">⬇ Download QR</button>
 </section>
 
 <footer>
@@ -419,8 +405,8 @@ footer span{color:var(--gold);}
           <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=upi://pay?pa=9917606538@pthdfc%26pn=Atul%20Yadav%20Cafe%26cu=INR" style="width:160px;height:160px;border-radius:6px;">
         </div>
         <div style="background:#0f0f0f;border:1px solid var(--border);border-radius:8px;padding:8px;display:flex;align-items:center;justify-content:center;gap:10px;">
-          <span style="font-size:14px;font-weight:700;color:var(--gold);">9917606538@pthdfc</span>
-          <button onclick="navigator.clipboard.writeText('9917606538@pthdfc');showToast('UPI Copied! ✅')" style="background:var(--gold);color:#000;border:none;padding:3px 10px;border-radius:15px;font-size:11px;font-weight:700;cursor:pointer;">Copy</button>
+          <span style="font-size:14px;font-weight:700;color:var(--gold);" id="upiDisplay">9917606538@pthdfc</span>
+          <button onclick="navigator.clipboard.writeText(document.getElementById('upiDisplay').textContent);showToast('UPI Copied! ✅')" style="background:var(--gold);color:#000;border:none;padding:3px 10px;border-radius:15px;font-size:11px;font-weight:700;cursor:pointer;">Copy</button>
         </div>
         <p style="font-size:11px;color:var(--muted);margin-top:8px;">✅ Payment ke baad screenshot WhatsApp pe bhejo</p>
       </div>
@@ -467,199 +453,1062 @@ footer span{color:var(--gold);}
 </div>
 
 <script>
-const SB_URL='https://fuuergnfegzwrqpolqao.supabase.co';
-const SB_KEY='sb_publishable_SFaIO5s9Wg-mdtSOv3lmhA_6Un8prtW';
-const ADMIN_USER='admin',ADMIN_PASS='atul2024';
-const H={'Content-Type':'application/json','apikey':SB_KEY,'Authorization':`Bearer ${SB_KEY}`};
+// ============================================================
+// CONFIGURATION — Apna Supabase URL aur Key yahan daalo
+// ============================================================
+const SB_URL = 'https://fuuergnfegzwrqpolqao.supabase.co';
+const SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ1dWVyZ25mZWd6d3Jxb2xxYW8iLCJyb2xlIjoiYW5vbiIsImlhdCI6MTcwMDAwMDAwMCwiZXhwIjoyMDAwMDAwMDAwfQ.PLACEHOLDER';
+// ⚠️ IMPORTANT: Upar wali key placeholder hai!
+// Apna actual anon key Supabase Dashboard > Settings > API se copy karo
 
-let settings=JSON.parse(localStorage.getItem('cafeSettings'))||{
-  cafeName:'ATUL YADAV',cafeTagline:'Coffee · Snacks · Vibes',
-  waNumber:'918448181079',location:'123, Main Market Road,\nNear Central Park,\nNew Delhi - 110001',
-  mapsLink:'https://maps.google.com',
-  hours:'Mon – Fri: 8:00 AM – 10:00 PM\nSaturday: 9:00 AM – 11:00 PM\nSunday: 10:00 AM – 9:00 PM',
-  offerBanner:'Buy 2 Coffee Get 1 Free! 🎉 | 20% OFF Snacks 🔥 | Happy Hours Tea ₹20 ☕',
-  showBanner:true,upiId:'9917606538@pthdfc'
+const ADMIN_USER = 'admin';
+const ADMIN_PASS = 'atul2024';
+
+const H = {
+  'Content-Type': 'application/json',
+  'apikey': SB_KEY,
+  'Authorization': `Bearer ${SB_KEY}`
 };
-let offers=JSON.parse(localStorage.getItem('cafeOffers'))||[
-  {id:1,tag:'LIMITED TIME',title:'Buy 2 Coffee Get 1 Free!',desc:'Order any 2 coffees get 3rd free.',validity:'Valid till 31 March'},
-  {id:2,tag:'TODAY ONLY',title:'20% OFF on All Snacks',desc:'Flat 20% discount on snacks.',validity:'Today only'},
-  {id:3,tag:'HAPPY HOURS',title:'Tea at just ₹20!',desc:'Every day 3PM–6PM.',validity:'Daily 3PM–6PM'}
+
+// ============================================================
+// STATE
+// ============================================================
+let settings = JSON.parse(localStorage.getItem('cafeSettings')) || {
+  cafeName: 'ATUL YADAV',
+  cafeTagline: 'Coffee · Snacks · Vibes',
+  waNumber: '918448181079',
+  location: '123, Main Market Road,\nNear Central Park,\nNew Delhi - 110001',
+  mapsLink: 'https://maps.google.com',
+  hours: 'Mon – Fri: 8:00 AM – 10:00 PM\nSaturday: 9:00 AM – 11:00 PM\nSunday: 10:00 AM – 9:00 PM',
+  offerBanner: 'Buy 2 Coffee Get 1 Free! 🎉 | 20% OFF Snacks 🔥 | Happy Hours Tea ₹20 ☕',
+  showBanner: true,
+  upiId: '9917606538@pthdfc'
+};
+
+let offers = JSON.parse(localStorage.getItem('cafeOffers')) || [
+  {id:1, tag:'LIMITED TIME', title:'Buy 2 Coffee Get 1 Free!', desc:'Order any 2 coffees get 3rd free.', validity:'Valid till 31 March'},
+  {id:2, tag:'TODAY ONLY', title:'20% OFF on All Snacks', desc:'Flat 20% discount on snacks.', validity:'Today only'},
+  {id:3, tag:'HAPPY HOURS', title:'Tea at just ₹20!', desc:'Every day 3PM–6PM.', validity:'Daily 3PM–6PM'}
 ];
-let menuItems=[],cart=[],activeCategory='All',selectedStars=5,adminLoggedIn=false,currentEditId=null,custLat=null,custLng=null,editImgFile=null,selectedPayment='upi';
 
-function saveSettings(){localStorage.setItem('cafeSettings',JSON.stringify(settings));}
-function saveOffers(){localStorage.setItem('cafeOffers',JSON.stringify(offers));}
+// Demo menu items (jab Supabase connect na ho tab)
+const demoItems = [
+  {id:1, name:'Cappuccino', description:'Rich espresso with steamed milk', price:120, old_price:150, category:'Coffee', veg:'veg', special:true, emoji:'☕', offer_tag:'20% OFF'},
+  {id:2, name:'Cold Coffee', description:'Chilled blended coffee', price:100, old_price:null, category:'Coffee', veg:'veg', special:false, emoji:'🧋', offer_tag:null},
+  {id:3, name:'Masala Chai', description:'Garam masala chai with adrak', price:30, old_price:null, category:'Tea', veg:'veg', special:false, emoji:'🫖', offer_tag:null},
+  {id:4, name:'Veg Sandwich', description:'Fresh vegetables with cheese', price:80, old_price:100, category:'Snacks', veg:'veg', special:false, emoji:'🥪', offer_tag:'20% OFF'},
+  {id:5, name:'French Fries', description:'Crispy golden fries', price:60, old_price:null, category:'Snacks', veg:'veg', special:false, emoji:'🍟', offer_tag:null},
+  {id:6, name:'Chocolate Cake', description:'Rich chocolate slice', price:90, old_price:null, category:'Desserts', veg:'veg', special:true, emoji:'🎂', offer_tag:null},
+  {id:7, name:'Brownie', description:'Warm chocolate brownie', price:70, old_price:null, category:'Desserts', veg:'veg', special:false, emoji:'🍫', offer_tag:null},
+  {id:8, name:'Green Tea', description:'Refreshing green tea', price:40, old_price:null, category:'Tea', veg:'veg', special:false, emoji:'🍵', offer_tag:null}
+];
 
-async function sbGet(t,q=''){try{const r=await fetch(`${SB_URL}/rest/v1/${t}?${q}&order=id.asc`,{headers:H});return await r.json();}catch(e){return[];}}
-async function sbInsert(t,data){try{const r=await fetch(`${SB_URL}/rest/v1/${t}`,{method:'POST',headers:{...H,'Prefer':'return=representation'},body:JSON.stringify(data)});return await r.json();}catch(e){return null;}}
-async function sbUpdate(t,id,data){try{const r=await fetch(`${SB_URL}/rest/v1/${t}?id=eq.${id}`,{method:'PATCH',headers:{...H,'Prefer':'return=representation'},body:JSON.stringify(data)});return await r.json();}catch(e){return null;}}
-async function sbDelete(t,id){try{await fetch(`${SB_URL}/rest/v1/${t}?id=eq.${id}`,{method:'DELETE',headers:H});}catch(e){}}
-async function uploadImage(file){const ext=file.name.split('.').pop();const fname=`item_${Date.now()}.${ext}`;try{const r=await fetch(`${SB_URL}/storage/v1/object/cafe-images/${fname}`,{method:'POST',headers:{'apikey':SB_KEY,'Authorization':`Bearer ${SB_KEY}`,'Content-Type':file.type},body:file});if(r.ok)return `${SB_URL}/storage/v1/object/public/cafe-images/${fname}`;}catch(e){}return null;}
+let menuItems = [];
+let cart = [];
+let activeCategory = 'All';
+let selectedStars = 5;
+let adminLoggedIn = false;
+let currentEditId = null;
+let custLat = null, custLng = null;
+let editImgFile = null;
+let selectedPayment = 'upi';
+let adminFabClicks = 0;
+let adminFabTimer = null;
 
-// APPLY SETTINGS + CAFE NAME
-function applySettings(){
-  const n=settings.cafeName||'ATUL YADAV';
-  document.getElementById('pgTitle').textContent=n+' — Café';
-  document.getElementById('navLogo').textContent='✦ '+n;
-  document.getElementById('heroSpan').textContent=n.split(' ').pop();
-  document.getElementById('heroTitle').innerHTML=n.split(' ').slice(0,-1).join(' ')+'<br><span id="heroSpan">'+n.split(' ').pop()+'</span>';
-  document.getElementById('heroSub').textContent=settings.cafeTagline||'Coffee · Snacks · Vibes';
-  document.getElementById('locTitle').textContent=n+' Café';
-  document.getElementById('footerName').textContent=n+' Café';
-  document.getElementById('heroBadge').textContent=n+' — Premium Café';
-  document.getElementById('waFooter').href=`https://wa.me/${settings.waNumber}`;
-  document.getElementById('locationText').innerHTML=(settings.location||'').replace(/\n/g,'<br>');
-  document.getElementById('mapsLink').href=settings.mapsLink||'https://maps.google.com';
-  document.getElementById('hoursDisplay').innerHTML=(settings.hours||'').split('\n').map(l=>{const p=l.split(':');return`<div class="hours-row"><span>${p[0]}</span><span>${p.slice(1).join(':').trim()}</span></div>`;}).join('');
-  if(settings.showBanner){
-    document.getElementById('offerBanner').classList.remove('hidden');
-    const items=(settings.offerBanner||'').split('|').map(s=>s.trim());
-    document.getElementById('offerTrack').innerHTML=[...items,...items].map(s=>`<span>✨ <em>${s}</em></span>`).join('');
-  } else document.getElementById('offerBanner').classList.add('hidden');
-}
+function saveSettings() { localStorage.setItem('cafeSettings', JSON.stringify(settings)); }
+function saveOffers() { localStorage.setItem('cafeOffers', JSON.stringify(offers)); }
 
-// WEATHER SUGGESTION
-async function loadWeather(){
-  const el=document.getElementById('weatherBox');
-  try{
-    const r=await fetch('https://wttr.in/?format=j1');
-    const d=await r.json();
-    const temp=parseInt(d.current_condition[0].temp_C);
-    const desc=d.current_condition[0].weatherDesc[0].value;
-    let suggest='',emoji='';
-    if(temp>=35){emoji='🥵';suggest='Bahut garmi! Cold Coffee ya Lassi try karo!';}
-    else if(temp>=28){emoji='☀️';suggest='Garam din! Iced Tea ya Cold Coffee perfect rahegi!';}
-    else if(temp>=20){emoji='🌤';suggest='Mausam acha hai! Cappuccino ya Sandwich enjoy karo!';}
-    else if(temp>=12){emoji='🌥';suggest='Thodi thand! Masala Chai ya Hot Coffee lelo!';}
-    else{emoji='🥶';suggest='Bahut thand! Garam Chai ya Soup zaroor lo!';}
-    el.innerHTML=`${emoji} ${temp}°C ${desc} — ${suggest}`;
-  } catch(e){
-    const h=new Date().getHours();
-    if(h>=6&&h<12)el.innerHTML='☀️ Good Morning! Cappuccino se din shuru karo!';
-    else if(h>=12&&h<17)el.innerHTML='🌤 Afternoon! Cold Coffee ya Snacks try karo!';
-    else if(h>=17&&h<21)el.innerHTML='🌇 Evening! Masala Chai aur Snacks perfect!';
-    else el.innerHTML='🌙 Late Night! Hot Chocolate ya Brownie enjoy karo!';
+// ============================================================
+// SUPABASE HELPERS — with fallback to demo data
+// ============================================================
+async function sbGet(table, query='') {
+  try {
+    const r = await fetch(`${SB_URL}/rest/v1/${table}?${query}&order=id.asc`, {headers: H});
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    return await r.json();
+  } catch(e) {
+    console.warn('Supabase fetch failed:', e.message);
+    return null;
   }
 }
 
+async function sbInsert(table, data) {
+  try {
+    const r = await fetch(`${SB_URL}/rest/v1/${table}`, {
+      method: 'POST',
+      headers: {...H, 'Prefer': 'return=representation'},
+      body: JSON.stringify(data)
+    });
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    return await r.json();
+  } catch(e) {
+    console.warn('Supabase insert failed:', e.message);
+    return null;
+  }
+}
+
+async function sbUpdate(table, id, data) {
+  try {
+    const r = await fetch(`${SB_URL}/rest/v1/${table}?id=eq.${id}`, {
+      method: 'PATCH',
+      headers: {...H, 'Prefer': 'return=representation'},
+      body: JSON.stringify(data)
+    });
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    return await r.json();
+  } catch(e) {
+    console.warn('Supabase update failed:', e.message);
+    return null;
+  }
+}
+
+async function sbDelete(table, id) {
+  try {
+    await fetch(`${SB_URL}/rest/v1/${table}?id=eq.${id}`, {method: 'DELETE', headers: H});
+  } catch(e) {
+    console.warn('Supabase delete failed:', e.message);
+  }
+}
+
+async function uploadImage(file) {
+  const ext = file.name.split('.').pop();
+  const fname = `item_${Date.now()}.${ext}`;
+  try {
+    const r = await fetch(`${SB_URL}/storage/v1/object/cafe-images/${fname}`, {
+      method: 'POST',
+      headers: {'apikey': SB_KEY, 'Authorization': `Bearer ${SB_KEY}`, 'Content-Type': file.type},
+      body: file
+    });
+    if (r.ok) return `${SB_URL}/storage/v1/object/public/cafe-images/${fname}`;
+  } catch(e) {}
+  return null;
+}
+
+// ============================================================
+// APPLY SETTINGS
+// ============================================================
+function applySettings() {
+  const n = settings.cafeName || 'ATUL YADAV';
+  document.getElementById('pgTitle').textContent = n + ' — Café';
+  document.getElementById('navLogo').textContent = '✦ ' + n;
+  const parts = n.split(' ');
+  const last = parts.pop();
+  const first = parts.join(' ');
+  document.getElementById('heroTitle').innerHTML = (first || n) + '<br><span id="heroSpan" style="color:var(--gold)">' + last + '</span>';
+  document.getElementById('heroSub').textContent = settings.cafeTagline || 'Coffee · Snacks · Vibes';
+  document.getElementById('heroBadge').textContent = n + ' — Premium Café';
+  document.getElementById('locTitle').textContent = n + ' Café';
+  document.getElementById('footerName').textContent = n + ' Café';
+  document.getElementById('waFooter').href = `https://wa.me/${settings.waNumber}`;
+  document.getElementById('locationText').innerHTML = (settings.location || '').replace(/\n/g, '<br>');
+  document.getElementById('mapsLink').href = settings.mapsLink || 'https://maps.google.com';
+  if (document.getElementById('upiDisplay')) {
+    document.getElementById('upiDisplay').textContent = settings.upiId || '9917606538@pthdfc';
+  }
+  document.getElementById('hoursDisplay').innerHTML = (settings.hours || '').split('\n').map(l => {
+    const idx = l.indexOf(':');
+    if (idx < 0) return `<div class="hours-row"><span>${l}</span></div>`;
+    return `<div class="hours-row"><span>${l.slice(0, idx)}</span><span>${l.slice(idx+1).trim()}</span></div>`;
+  }).join('');
+  if (settings.showBanner) {
+    document.getElementById('offerBanner').classList.remove('hidden');
+    const items = (settings.offerBanner || '').split('|').map(s => s.trim());
+    document.getElementById('offerTrack').innerHTML = [...items, ...items].map(s => `<span>✨ <em>${s}</em></span>`).join('');
+  } else {
+    document.getElementById('offerBanner').classList.add('hidden');
+  }
+}
+
+// ============================================================
+// WEATHER
+// ============================================================
+async function loadWeather() {
+  const el = document.getElementById('weatherBox');
+  try {
+    const r = await fetch('https://wttr.in/?format=j1');
+    const d = await r.json();
+    const temp = parseInt(d.current_condition[0].temp_C);
+    const desc = d.current_condition[0].weatherDesc[0].value;
+    let suggest = '', emoji = '';
+    if (temp >= 35) { emoji = '🥵'; suggest = 'Bahut garmi! Cold Coffee ya Lassi try karo!'; }
+    else if (temp >= 28) { emoji = '☀️'; suggest = 'Garam din! Iced Tea ya Cold Coffee perfect rahegi!'; }
+    else if (temp >= 20) { emoji = '🌤'; suggest = 'Mausam acha hai! Cappuccino enjoy karo!'; }
+    else if (temp >= 12) { emoji = '🌥'; suggest = 'Thodi thand! Masala Chai ya Hot Coffee lelo!'; }
+    else { emoji = '🥶'; suggest = 'Bahut thand! Garam Chai ya Soup zaroor lo!'; }
+    el.innerHTML = `${emoji} ${temp}°C ${desc} — ${suggest}`;
+  } catch(e) {
+    const h = new Date().getHours();
+    if (h >= 6 && h < 12) el.innerHTML = '☀️ Good Morning! Cappuccino se din shuru karo!';
+    else if (h >= 12 && h < 17) el.innerHTML = '🌤 Afternoon! Cold Coffee ya Snacks try karo!';
+    else if (h >= 17 && h < 21) el.innerHTML = '🌇 Evening! Masala Chai aur Snacks perfect!';
+    else el.innerHTML = '🌙 Late Night! Hot Chocolate ya Brownie enjoy karo!';
+  }
+}
+
+// ============================================================
 // MOOD SUGGEST
-const moodMap={
-  happy:{text:"🥳 Aap khush hain! Party mood ke liye Special items try karo!",items:["Chocolate Cake","Cold Coffee","French Fries","Brownie"]},
-  tired:{text:"😴 Thake hue ho? Energy boost ke liye yeh try karo!",items:["Cappuccino","Masala Chai","Paneer Toast","Veg Sandwich"]},
-  hungry:{text:"😋 Bahut bhookh lagi hai! Heavy items order karo!",items:["Paneer Toast","Veg Sandwich","French Fries","Brownie"]},
-  chill:{text:"😎 Chill mode mein ho? Light aur tasty items try karo!",items:["Cold Coffee","Green Tea","French Fries","Chocolate Cake"]},
-  work:{text:"💻 Kaam kar rahe ho? Focus boost ke liye!",items:["Cappuccino","Green Tea","Veg Sandwich","Brownie"]},
-  date:{text:"💕 Date pe ho? Romantic aur special items order karo!",items:["Cappuccino","Chocolate Cake","Cold Coffee","Brownie"]}
+// ============================================================
+const moodMap = {
+  happy:   {text:"🥳 Aap khush hain! Party mood ke liye try karo!", items:["Chocolate Cake","Cold Coffee","French Fries","Brownie"]},
+  tired:   {text:"😴 Thake hue ho? Energy boost ke liye!", items:["Cappuccino","Masala Chai","Veg Sandwich","Brownie"]},
+  hungry:  {text:"😋 Bahut bhookh lagi hai! Heavy items order karo!", items:["Veg Sandwich","French Fries","Brownie","Chocolate Cake"]},
+  chill:   {text:"😎 Chill mode mein ho? Light items try karo!", items:["Cold Coffee","Green Tea","French Fries","Chocolate Cake"]},
+  work:    {text:"💻 Kaam kar rahe ho? Focus boost ke liye!", items:["Cappuccino","Green Tea","Veg Sandwich","Brownie"]},
+  date:    {text:"💕 Date pe ho? Special items order karo!", items:["Cappuccino","Chocolate Cake","Cold Coffee","Brownie"]}
 };
-function getMoodSuggest(mood,label){
-  document.querySelectorAll('.mood-btn').forEach(b=>b.classList.remove('sel'));
-  event.target.classList.add('sel');
-  const m=moodMap[mood];
-  document.getElementById('moodText').textContent=m.text;
-  document.getElementById('moodChips').innerHTML=m.items.map(i=>`<span class="mood-chip" onclick="searchMenu('${i}');document.getElementById('menu').scrollIntoView({behavior:'smooth'})">${i}</span>`).join('');
+
+function getMoodSuggest(mood, btn) {
+  document.querySelectorAll('.mood-btn').forEach(b => b.classList.remove('sel'));
+  btn.classList.add('sel');
+  const m = moodMap[mood];
+  document.getElementById('moodText').textContent = m.text;
+  document.getElementById('moodChips').innerHTML = m.items.map(i =>
+    `<span class="mood-chip" onclick="searchMenu('${i}');document.getElementById('menu').scrollIntoView({behavior:'smooth'})">${i}</span>`
+  ).join('');
   document.getElementById('moodResult').classList.add('show');
 }
 
+// ============================================================
 // MENU
-async function loadMenu(){menuItems=await sbGet('menu_items')||[];renderCategoryTabs();renderMenu();}
-function renderCategoryTabs(){document.getElementById('catTabs').innerHTML=['All',...new Set(menuItems.map(i=>i.category))].map(c=>`<button class="cat-tab ${c===activeCategory?'active':''}" onclick="filterCategory('${c}')">${c}</button>`).join('');}
-function filterCategory(c){activeCategory=c;document.getElementById('searchInput').value='';document.getElementById('sClear').style.display='none';renderCategoryTabs();renderMenu();}
-function searchMenu(val){
-  document.getElementById('sClear').style.display=val?'block':'none';
-  const q=val.toLowerCase().trim();
-  if(!q){renderMenu();return;}
-  renderMenuItems(menuItems.filter(i=>i.name.toLowerCase().includes(q)||(i.description&&i.description.toLowerCase().includes(q))||(i.category&&i.category.toLowerCase().includes(q))));
-}
-function clearSearch(){document.getElementById('searchInput').value='';document.getElementById('sClear').style.display='none';renderMenu();}
-function renderMenu(){renderMenuItems(activeCategory==='All'?menuItems:menuItems.filter(i=>i.category===activeCategory));}
-function renderMenuItems(items){
-  document.getElementById('menuGrid').innerHTML=items.length===0?'<div class="loading" style="grid-column:1/-1">Koi item nahi mila 😔</div>':items.map(item=>`
-  <div class="menu-card">
-    <div class="${item.veg==='veg'?'badge-veg':'badge-nonveg'}">${item.veg==='veg'?'🟢 VEG':'🔴 NON-VEG'}</div>
-    ${item.special?'<div class="badge-special">⭐ Special</div>':''}
-    <div class="menu-card-img">${item.image_url?`<img src="${item.image_url}" alt="${item.name}" onerror="this.parentNode.innerHTML='${item.emoji||'🍽️'}'">`:item.emoji||'🍽️'}</div>
-    <div class="menu-card-body">
-      <div class="menu-card-name">${item.name}</div>
-      <div class="menu-card-desc">${item.description||''}</div>
-      <div class="menu-card-footer">
-        <div class="price-box">
-          ${item.offer_tag?`<span class="offer-tag">${item.offer_tag}</span>`:''}
-          ${item.old_price?`<span class="menu-card-oldprice">₹${item.old_price}</span>`:''}
-          <span class="menu-card-price">₹${item.price}</span>
-        </div>
-        <button class="add-cart-btn" onclick="addToCart(${item.id})">+ Cart</button>
-      </div>
-    </div>
-  </div>`).join('');
+// ============================================================
+async function loadMenu() {
+  const data = await sbGet('menu_items');
+  if (data && Array.isArray(data) && data.length > 0) {
+    menuItems = data;
+  } else {
+    // Supabase se data nahi aaya — demo items use karo
+    menuItems = demoItems;
+    console.log('Using demo menu items (Supabase key update karein)');
+  }
+  renderCategoryTabs();
+  renderMenu();
 }
 
+function renderCategoryTabs() {
+  const cats = ['All', ...new Set(menuItems.map(i => i.category).filter(Boolean))];
+  document.getElementById('catTabs').innerHTML = cats.map(c =>
+    `<button class="cat-tab ${c===activeCategory?'active':''}" onclick="filterCategory('${c}')">${c}</button>`
+  ).join('');
+}
+
+function filterCategory(c) {
+  activeCategory = c;
+  document.getElementById('searchInput').value = '';
+  document.getElementById('sClear').style.display = 'none';
+  renderCategoryTabs();
+  renderMenu();
+}
+
+function searchMenu(val) {
+  document.getElementById('sClear').style.display = val ? 'block' : 'none';
+  const q = val.toLowerCase().trim();
+  if (!q) { renderMenu(); return; }
+  renderMenuItems(menuItems.filter(i =>
+    i.name.toLowerCase().includes(q) ||
+    (i.description && i.description.toLowerCase().includes(q)) ||
+    (i.category && i.category.toLowerCase().includes(q))
+  ));
+}
+
+function clearSearch() {
+  document.getElementById('searchInput').value = '';
+  document.getElementById('sClear').style.display = 'none';
+  renderMenu();
+}
+
+function renderMenu() {
+  const items = activeCategory === 'All' ? menuItems : menuItems.filter(i => i.category === activeCategory);
+  renderMenuItems(items);
+}
+
+function renderMenuItems(items) {
+  if (items.length === 0) {
+    document.getElementById('menuGrid').innerHTML = '<div class="loading" style="grid-column:1/-1">Koi item nahi mila 😔</div>';
+    return;
+  }
+  document.getElementById('menuGrid').innerHTML = items.map(item => `
+    <div class="menu-card">
+      <div class="${item.veg === 'veg' ? 'badge-veg' : 'badge-nonveg'}">${item.veg === 'veg' ? '🟢 VEG' : '🔴 NON-VEG'}</div>
+      ${item.special ? '<div class="badge-special">⭐ Special</div>' : ''}
+      <div class="menu-card-img">${item.image_url
+        ? `<img src="${item.image_url}" alt="${item.name}" onerror="this.parentNode.innerHTML='${item.emoji||'🍽️'}'">` 
+        : (item.emoji || '🍽️')}</div>
+      <div class="menu-card-body">
+        <div class="menu-card-name">${item.name}</div>
+        <div class="menu-card-desc">${item.description || ''}</div>
+        <div class="menu-card-footer">
+          <div class="price-box">
+            ${item.offer_tag ? `<span class="offer-tag">${item.offer_tag}</span>` : ''}
+            ${item.old_price ? `<span class="menu-card-oldprice">₹${item.old_price}</span>` : ''}
+            <span class="menu-card-price">₹${item.price}</span>
+          </div>
+          <button class="add-cart-btn" onclick="addToCart(${item.id})">+ Cart</button>
+        </div>
+      </div>
+    </div>`).join('');
+}
+
+// ============================================================
+// CART
+// ============================================================
+function addToCart(id) {
+  const item = menuItems.find(i => i.id === id);
+  if (!item) return;
+  const existing = cart.find(c => c.id === id);
+  if (existing) {
+    existing.qty += 1;
+  } else {
+    cart.push({...item, qty: 1});
+  }
+  updateCartCount();
+  showToast(`${item.name} added to cart! 🛒`);
+}
+
+function updateCartCount() {
+  const total = cart.reduce((s, i) => s + i.qty, 0);
+  document.getElementById('cartCount').textContent = total;
+}
+
+function openCart() {
+  if (cart.length === 0) {
+    showToast('Cart khali hai! Pehle items add karo.');
+    return;
+  }
+  renderCartModal();
+  document.getElementById('cartModal').classList.add('open');
+}
+
+function closeCart() {
+  document.getElementById('cartModal').classList.remove('open');
+}
+
+function renderCartModal() {
+  const total = cart.reduce((s, i) => s + i.price * i.qty, 0);
+  document.getElementById('cartItems').innerHTML = cart.map(item => `
+    <div class="cart-item">
+      <div class="cart-item-emoji">${item.emoji || '🍽️'}</div>
+      <div class="cart-item-info">
+        <strong>${item.name}</strong>
+        <span>₹${item.price} × ${item.qty} = ₹${item.price * item.qty}</span>
+      </div>
+      <div class="cart-qty">
+        <button class="qty-btn" onclick="changeQty(${item.id},-1)">−</button>
+        <span>${item.qty}</span>
+        <button class="qty-btn" onclick="changeQty(${item.id},1)">+</button>
+      </div>
+    </div>`).join('');
+  document.getElementById('cartFooter').innerHTML = `
+    <div class="cart-total"><span>Total</span><span>₹${total}</span></div>
+    <button class="btn btn-wa" style="width:100%;justify-content:center;" onclick="closeCart();openOrderModal()">✅ Proceed to Order</button>`;
+}
+
+function changeQty(id, delta) {
+  const item = cart.find(c => c.id === id);
+  if (!item) return;
+  item.qty += delta;
+  if (item.qty <= 0) cart = cart.filter(c => c.id !== id);
+  updateCartCount();
+  if (cart.length === 0) { closeCart(); return; }
+  renderCartModal();
+}
+
+// ============================================================
+// ORDER MODAL
+// ============================================================
+function openOrderModal() {
+  document.getElementById('orderModal').classList.add('open');
+  selPay('upi');
+}
+
+function closeOrderModal() {
+  document.getElementById('orderModal').classList.remove('open');
+}
+
+function selPay(type) {
+  selectedPayment = type;
+  document.getElementById('upiSec').style.display = type === 'upi' ? 'block' : 'none';
+  document.getElementById('codSec').style.display = type === 'cod' ? 'block' : 'none';
+  document.getElementById('btnUPI').style.borderColor = type === 'upi' ? 'var(--gold)' : 'var(--border)';
+  document.getElementById('btnUPI').style.color = type === 'upi' ? 'var(--gold)' : 'var(--muted)';
+  document.getElementById('btnCOD').style.borderColor = type === 'cod' ? '#4caf50' : 'var(--border)';
+  document.getElementById('btnCOD').style.color = type === 'cod' ? '#4caf50' : 'var(--muted)';
+}
+
+function getLocation() {
+  document.getElementById('locStatus').textContent = '⏳ Location mil rahi hai...';
+  navigator.geolocation.getCurrentPosition(pos => {
+    custLat = pos.coords.latitude;
+    custLng = pos.coords.longitude;
+    document.getElementById('custAddress').value = `https://maps.google.com/?q=${custLat},${custLng}`;
+    document.getElementById('locStatus').textContent = '✅ Location mili! Auto-filled.';
+  }, () => {
+    document.getElementById('locStatus').textContent = '❌ Location nahi mili. Manually daalo.';
+  });
+}
+
+async function placeOrder() {
+  const name = document.getElementById('custName').value.trim();
+  const phone = document.getElementById('custPhone').value.trim();
+  const address = document.getElementById('custAddress').value.trim();
+  const note = document.getElementById('custNote').value.trim();
+  if (!name || !phone || !address) { showToast('Naam, Phone aur Address zaroori hai!'); return; }
+  const total = cart.reduce((s, i) => s + i.price * i.qty, 0);
+  const itemsText = cart.map(i => `• ${i.name} ×${i.qty} = ₹${i.price * i.qty}`).join('\n');
+  const payText = selectedPayment === 'upi' ? 'UPI/QR' : 'Cash on Delivery';
+  const msg = `🛒 *New Order — ${settings.cafeName} Café*\n\n👤 *Name:* ${name}\n📞 *Phone:* ${phone}\n📍 *Address:* ${address}\n\n*Items:*\n${itemsText}\n\n💰 *Total: ₹${total}*\n💳 *Payment: ${payText}*${note ? '\n\n📝 Note: ' + note : ''}`;
+
+  // Save to Supabase (if available)
+  try {
+    await sbInsert('orders', {
+      customer_name: name,
+      phone: phone,
+      address: address,
+      items: JSON.stringify(cart.map(i => ({name: i.name, qty: i.qty, price: i.price}))),
+      total: total,
+      payment_mode: selectedPayment,
+      note: note,
+      status: 'pending'
+    });
+  } catch(e) { /* ok if fails */ }
+
+  window.open(`https://wa.me/${settings.waNumber}?text=${encodeURIComponent(msg)}`, '_blank');
+  cart = [];
+  updateCartCount();
+  closeOrderModal();
+  showToast('Order WhatsApp pe bheja! 🎉');
+}
+
+// ============================================================
+// TRACK ORDERS
+// ============================================================
+async function trackOrders() {
+  const phone = document.getElementById('trackPhone').value.trim();
+  if (!phone) { showToast('Phone number daalo!'); return; }
+  const grid = document.getElementById('orderHistoryGrid');
+  grid.innerHTML = '<div class="loading"><div class="spinner"></div></div>';
+  const data = await sbGet('orders', `phone=eq.${phone}`);
+  if (!data || data.length === 0) {
+    grid.innerHTML = '<p style="color:var(--muted);">Koi orders nahi mili is number pe.</p>';
+    return;
+  }
+  const statusClass = {pending:'status-pending', confirmed:'status-confirmed', delivered:'status-delivered', cancelled:'status-cancelled'};
+  grid.innerHTML = data.reverse().map(o => {
+    let items = [];
+    try { items = JSON.parse(o.items); } catch(e) {}
+    return `<div class="order-hist-card">
+      <div class="order-hist-header">
+        <div>
+          <strong>Order #${o.id}</strong>
+          <div style="font-size:12px;color:var(--muted);margin-top:2px;">${new Date(o.created_at).toLocaleDateString('hi-IN')}</div>
+        </div>
+        <span class="order-status ${statusClass[o.status]||'status-pending'}">${o.status||'pending'}</span>
+      </div>
+      <div style="font-size:13px;color:#bbb;">${items.map(i => `${i.name} ×${i.qty}`).join(', ')}</div>
+      <div style="font-size:15px;font-weight:700;color:var(--gold);margin-top:8px;">₹${o.total}</div>
+    </div>`;
+  }).join('');
+}
+
+// ============================================================
 // SPIN WHEEL
-const prizes=[
-  {label:'10% OFF',color:'#c9a84c',msg:'🎉 10% Discount mila! Order karte waqt "SPIN10" bolna!'},
-  {label:'Free Tea',color:'#8e44ad',msg:'🍵 Free Masala Chai mili! Aaj order karo!'},
-  {label:'20% OFF',color:'#e74c3c',msg:'🔥 20% Discount mila! Jaldi order karo!'},
-  {label:'Try Again',color:'#2a2a2a',msg:'😅 Is baar nahi! Kal phir try karna!'},
-  {label:'Free Fries',color:'#e67e22',msg:'🍟 Free French Fries mili! Order mein mention karna!'},
-  {label:'5% OFF',color:'#27ae60',msg:'✅ 5% Discount mila! Har order pe valid!'},
-  {label:'Free Coffee',color:'#2980b9',msg:'☕ Free Coffee mili! Aaj ka din lucky hai!'},
-  {label:'Try Again',color:'#1a1a1a',msg:'😅 Iss baar luck nahi chala! Kal aana!'},
+// ============================================================
+const prizes = [
+  {label:'10% OFF', color:'#c9a84c', msg:'🎉 10% Discount mila! Order karte waqt "SPIN10" bolna!'},
+  {label:'Free Tea', color:'#8e44ad', msg:'🍵 Free Masala Chai mili! Aaj order karo!'},
+  {label:'20% OFF', color:'#e74c3c', msg:'🔥 20% Discount mila! Jaldi order karo!'},
+  {label:'Try Again', color:'#2a2a2a', msg:'😅 Is baar nahi! Kal phir try karna!'},
+  {label:'Free Fries', color:'#e67e22', msg:'🍟 Free French Fries mili! Order mein mention karna!'},
+  {label:'5% OFF', color:'#27ae60', msg:'✅ 5% Discount mila! Har order pe valid!'},
+  {label:'Free Coffee', color:'#2980b9', msg:'☕ Free Coffee mili! Aaj ka din lucky hai!'},
+  {label:'Try Again', color:'#1a1a1a', msg:'😅 Iss baar luck nahi chala! Kal aana!'}
 ];
-let spinning=false,spinUsed=localStorage.getItem('spinUsed')==='true';
-function drawWheel(){
-  const canvas=document.getElementById('wheelCanvas');
-  const ctx=canvas.getContext('2d');
-  const cx=130,cy=130,r=120,arc=2*Math.PI/prizes.length;
-  prizes.forEach((p,i)=>{
-    ctx.beginPath();ctx.moveTo(cx,cy);
-    ctx.arc(cx,cy,r,i*arc,(i+1)*arc);
-    ctx.fillStyle=p.color;ctx.fill();
-    ctx.strokeStyle='#0a0a0a';ctx.lineWidth=2;ctx.stroke();
-    ctx.save();ctx.translate(cx,cy);
-    ctx.rotate(i*arc+arc/2);
-    ctx.textAlign='right';ctx.fillStyle='#fff';
-    ctx.font='bold 12px DM Sans';
-    ctx.fillText(p.label,r-8,5);
+
+let spinning = false;
+let spinUsed = localStorage.getItem('spinUsed') === 'true';
+
+function drawWheel() {
+  const canvas = document.getElementById('wheelCanvas');
+  const ctx = canvas.getContext('2d');
+  const cx = 130, cy = 130, r = 120;
+  const arc = 2 * Math.PI / prizes.length;
+  prizes.forEach((p, i) => {
+    ctx.beginPath();
+    ctx.moveTo(cx, cy);
+    ctx.arc(cx, cy, r, i * arc, (i + 1) * arc);
+    ctx.fillStyle = p.color;
+    ctx.fill();
+    ctx.strokeStyle = '#0a0a0a';
+    ctx.lineWidth = 2;
+    ctx.stroke();
+    ctx.save();
+    ctx.translate(cx, cy);
+    ctx.rotate(i * arc + arc / 2);
+    ctx.textAlign = 'right';
+    ctx.fillStyle = '#fff';
+    ctx.font = 'bold 12px DM Sans';
+    ctx.fillText(p.label, r - 8, 5);
     ctx.restore();
   });
-  ctx.beginPath();ctx.arc(cx,cy,20,0,2*Math.PI);
-  ctx.fillStyle='#0a0a0a';ctx.fill();
-  ctx.strokeStyle=styles='#c9a84c';ctx.lineWidth=3;ctx.stroke();
+  ctx.beginPath();
+  ctx.arc(cx, cy, 20, 0, 2 * Math.PI);
+  ctx.fillStyle = '#0a0a0a';
+  ctx.fill();
+  ctx.strokeStyle = '#c9a84c';
+  ctx.lineWidth = 3;
+  ctx.stroke();
 }
-function spinWheel(){
-  if(spinning)return;
-  if(spinUsed){showToast('Kal phir spin karo! Ek din mein sirf ek spin!');return;}
-  spinning=true;
-  document.getElementById('spinBtn').disabled=true;
-  document.getElementById('spinResult').style.display='none';
-  const canvas=document.getElementById('wheelCanvas');
-  const totalRotation=360*8+Math.random()*360;
-  let start=null,duration=4000,current=0;
-  function animate(ts){
-    if(!start)start=ts;
-    const elapsed=ts-start;
-    const progress=Math.min(elapsed/duration,1);
-    const ease=1-Math.pow(1-progress,4);
-    current=totalRotation*ease;
-    canvas.style.transform=`rotate(${current}deg)`;
-    if(progress<1){requestAnimationFrame(animate);}
-    else{
-      spinning=false;
-      const finalDeg=current%360;
-      const prizeIndex=Math.floor(((360-finalDeg)%(360))/(360/prizes.length));
-      const prize=prizes[prizeIndex%prizes.length];
-      const resEl=document.getElementById('spinResult');
-      resEl.style.display='block';
-      resEl.innerHTML=`<strong style="font-size:18px;">${prize.label}</strong><br>${prize.msg}<br><br><button class="btn btn-wa" style="margin-top:8px;" onclick="orderWithSpin('${prize.msg}')">WhatsApp pe Claim Karo</button>`;
-      spinUsed=true;localStorage.setItem('spinUsed','true');
-      document.getElementById('spinBtn').textContent='Kal aana! 🎰';
+
+function spinWheel() {
+  if (spinning) return;
+  if (spinUsed) { showToast('Kal phir spin karo! Ek din mein sirf ek spin!'); return; }
+  spinning = true;
+  document.getElementById('spinBtn').disabled = true;
+  document.getElementById('spinResult').style.display = 'none';
+  const canvas = document.getElementById('wheelCanvas');
+  const totalRotation = 360 * 8 + Math.random() * 360;
+  let start = null, duration = 4000, current = 0;
+  function animate(ts) {
+    if (!start) start = ts;
+    const elapsed = ts - start;
+    const progress = Math.min(elapsed / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 4);
+    current = totalRotation * ease;
+    canvas.style.transform = `rotate(${current}deg)`;
+    if (progress < 1) {
+      requestAnimationFrame(animate);
+    } else {
+      spinning = false;
+      const finalDeg = current % 360;
+      const prizeIndex = Math.floor(((360 - finalDeg) % 360) / (360 / prizes.length));
+      const prize = prizes[prizeIndex % prizes.length];
+      const resEl = document.getElementById('spinResult');
+      resEl.style.display = 'block';
+      resEl.innerHTML = `<strong style="font-size:18px;">${prize.label}</strong><br>${prize.msg}<br><br>
+        <button class="btn btn-wa" style="margin-top:8px;" onclick="orderWithSpin('${prize.msg}')">WhatsApp pe Claim Karo</button>`;
+      spinUsed = true;
+      localStorage.setItem('spinUsed', 'true');
+      const btn = document.getElementById('spinBtn');
+      btn.textContent = 'Kal aana! 🎰';
+      btn.disabled = true;
     }
   }
   requestAnimationFrame(animate);
 }
-function orderWithSpin(msg){
-  const text=encodeURIComponent(`Hello ${settings.cafeName} Café! 🎰\n\nMainne Spin & Win mein jeeta: ${msg}\n\nKya main yeh claim kar sakta hoon?`);
-  window.open(`https://wa.me/${settings.waNumber}?text=${text}`,'_blank');
+
+function orderWithSpin(msg) {
+  const text = encodeURIComponent(`Hello ${settings.cafeName} Café! 🎰\n\nMainne Spin & Win mein jeeta: ${msg}\n\nKya main yeh claim kar sakta hoon?`);
+  window.open(`https://wa.me/${settings.waNumber}?text=${text}`, '_blank');
 }
 
-// CART
-function addToCart(id
+// ============================================================
+// OFFERS
+// ============================================================
+function renderOffers() {
+  document.getElementById('offersGrid').innerHTML = offers.map(o => `
+    <div class="offer-card">
+      <div class="offer-card-tag">${o.tag}</div>
+      <div class="offer-card-title">${o.title}</div>
+      <div class="offer-card-desc">${o.desc}</div>
+      <div class="offer-card-validity">🗓 ${o.validity}</div>
+    </div>`).join('');
+}
+
+// ============================================================
+// REVIEWS
+// ============================================================
+async function loadReviews() {
+  const data = await sbGet('reviews');
+  const grid = document.getElementById('reviewsGrid');
+  if (!data || data.length === 0) {
+    grid.innerHTML = '<p style="color:var(--muted);padding:20px;">Abhi tak koi review nahi. Pehle review do!</p>';
+    return;
+  }
+  grid.innerHTML = data.slice(-6).reverse().map(r => `
+    <div class="review-card">
+      <div class="review-header">
+        <div class="review-avatar">${(r.name||'A')[0].toUpperCase()}</div>
+        <div>
+          <div class="review-name">${r.name || 'Anonymous'}</div>
+          <div class="review-date">${r.created_at ? new Date(r.created_at).toLocaleDateString('hi-IN') : ''}</div>
+        </div>
+      </div>
+      <div class="stars">${'★'.repeat(r.rating || 5)}${'☆'.repeat(5-(r.rating||5))}</div>
+      <div class="review-text">${r.review || ''}</div>
+    </div>`).join('');
+}
+
+function setStars(n) {
+  selectedStars = n;
+  document.querySelectorAll('.star-btn').forEach((b, i) => {
+    b.classList.toggle('active', i < n);
+  });
+}
+
+async function submitReview() {
+  const name = document.getElementById('reviewName').value.trim();
+  const review = document.getElementById('reviewText').value.trim();
+  if (!name || !review) { showToast('Naam aur review dono daalo!'); return; }
+  const result = await sbInsert('reviews', {name, review, rating: selectedStars});
+  if (result) {
+    showToast('Review submit ho gaya! ✅');
+    document.getElementById('reviewName').value = '';
+    document.getElementById('reviewPhone2').value = '';
+    document.getElementById('reviewText').value = '';
+    setStars(5);
+    loadReviews();
+  } else {
+    showToast('Review save nahi hua. Supabase check karo.');
+  }
+}
+
+// ============================================================
+// AI CHATBOT (simple rule-based)
+// ============================================================
+let chatOpen = false;
+const chatReplies = {
+  'menu': 'Hamara menu dekhne ke liye upar scroll karo! Coffee, Tea, Snacks, Desserts sab available hai. 😋',
+  'price': 'Prices ₹20 se shuru hote hain! Masala Chai ₹30, Cold Coffee ₹100, Sandwich ₹80. 💰',
+  'order': 'Order karne ke liye Cart mein items add karo phir "Order Now" button dabao! WhatsApp pe order jayega. 📱',
+  'time': `Hum ${settings.hours.split('\n')[0]} open rehte hain! 🕐`,
+  'location': `Hum yahan hain: ${settings.location.replace(/\n/g, ', ')} 📍`,
+  'offer': 'Abhi special offers hain! Buy 2 Coffee Get 1 Free, 20% OFF Snacks, Happy Hours Chai ₹20! 🎉',
+  'spin': 'Spin & Win section mein jao aur free discount ya item jeet sakte ho! 🎰',
+  'delivery': 'Delivery available hai! Order mein apna address daalo. 🛵',
+  'wifi': 'Ji haan! Free WiFi available hai cafe mein. 📶',
+  'parking': 'Parking available hai cafe ke samne. 🚗'
+};
+
+function toggleChat() {
+  chatOpen = !chatOpen;
+  const win = document.getElementById('chatWin');
+  win.classList.toggle('open', chatOpen);
+  if (chatOpen && document.getElementById('chatMsgs').children.length === 0) {
+    addBotMsg(`Namaste! 🙏 Main ${settings.cafeName} Café ka AI Waiter hoon. Kya puchna hai?`);
+    renderQuickReplies(['Menu dekho', 'Prices', 'Offers', 'Location', 'Order karo']);
+  }
+}
+
+function addBotMsg(text) {
+  const div = document.createElement('div');
+  div.className = 'msg bot';
+  div.textContent = text;
+  document.getElementById('chatMsgs').appendChild(div);
+  document.getElementById('chatMsgs').scrollTop = 9999;
+}
+
+function addUserMsg(text) {
+  const div = document.createElement('div');
+  div.className = 'msg user';
+  div.textContent = text;
+  document.getElementById('chatMsgs').appendChild(div);
+  document.getElementById('chatMsgs').scrollTop = 9999;
+}
+
+function renderQuickReplies(arr) {
+  document.getElementById('quickReplies').innerHTML = arr.map(t =>
+    `<button class="qc" onclick="sendQuick('${t}')">${t}</button>`
+  ).join('');
+}
+
+function sendQuick(text) {
+  addUserMsg(text);
+  document.getElementById('quickReplies').innerHTML = '';
+  processChat(text.toLowerCase());
+}
+
+function sendChat() {
+  const inp = document.getElementById('chatInput');
+  const text = inp.value.trim();
+  if (!text) return;
+  addUserMsg(text);
+  inp.value = '';
+  document.getElementById('quickReplies').innerHTML = '';
+  processChat(text.toLowerCase());
+}
+
+function processChat(text) {
+  setTimeout(() => {
+    let reply = 'Mujhe samajh nahi aaya. Menu, Price, Offers, Location, Order ke baare mein pooch sakte ho! 😊';
+    for (const [key, val] of Object.entries(chatReplies)) {
+      if (text.includes(key)) { reply = val; break; }
+    }
+    addBotMsg(reply);
+    renderQuickReplies(['Menu', 'Offers', 'Order karo', 'Location']);
+  }, 600);
+}
+
+// ============================================================
+// TOAST
+// ============================================================
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3000);
+}
+
+// ============================================================
+// ADMIN PANEL — Triple click on ⚙️ button to open
+// ============================================================
+function adminFabClick() {
+  adminFabClicks++;
+  clearTimeout(adminFabTimer);
+  adminFabTimer = setTimeout(() => { adminFabClicks = 0; }, 2000);
+  if (adminFabClicks >= 3) {
+    adminFabClicks = 0;
+    openAdmin();
+  }
+}
+
+function openAdmin() {
+  document.getElementById('adminModal').classList.add('open');
+  if (!adminLoggedIn) {
+    renderAdminLogin();
+  } else {
+    renderAdminPanel();
+  }
+}
+
+function closeAdmin() {
+  document.getElementById('adminModal').classList.remove('open');
+}
+
+function renderAdminLogin() {
+  document.getElementById('adminBody').innerHTML = `
+    <div class="login-form">
+      <h2>🔐 Admin Login</h2>
+      <input class="form-input" id="aUser" placeholder="Username" style="margin-bottom:10px;">
+      <input class="form-input" id="aPass" placeholder="Password" type="password" style="margin-bottom:16px;">
+      <button class="btn btn-gold" style="width:100%;justify-content:center;" onclick="adminLogin()">Login</button>
+    </div>`;
+}
+
+function adminLogin() {
+  const u = document.getElementById('aUser').value.trim();
+  const p = document.getElementById('aPass').value.trim();
+  if (u === ADMIN_USER && p === ADMIN_PASS) {
+    adminLoggedIn = true;
+    renderAdminPanel();
+  } else {
+    showToast('Wrong credentials! ❌');
+  }
+}
+
+function renderAdminPanel() {
+  document.getElementById('adminBody').innerHTML = `
+    <div class="admin-tabs">
+      <button class="admin-tab active" onclick="showAdminTab('items',this)">📋 Menu Items</button>
+      <button class="admin-tab" onclick="showAdminTab('orders',this)">📦 Orders</button>
+      <button class="admin-tab" onclick="showAdminTab('offers',this)">🎉 Offers</button>
+      <button class="admin-tab" onclick="showAdminTab('settings',this)">⚙ Settings</button>
+    </div>
+    <div id="adminTab_items" class="admin-section active"></div>
+    <div id="adminTab_orders" class="admin-section"></div>
+    <div id="adminTab_offers" class="admin-section"></div>
+    <div id="adminTab_settings" class="admin-section"></div>`;
+  loadAdminItems();
+}
+
+function showAdminTab(tab, btn) {
+  document.querySelectorAll('.admin-tab').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.admin-section').forEach(s => s.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('adminTab_' + tab).classList.add('active');
+  if (tab === 'items') loadAdminItems();
+  if (tab === 'orders') loadAdminOrders();
+  if (tab === 'offers') renderAdminOffers();
+  if (tab === 'settings') renderAdminSettings();
+}
+
+async function loadAdminItems() {
+  const sec = document.getElementById('adminTab_items');
+  sec.innerHTML = '<div class="loading"><div class="spinner"></div></div>';
+  const data = await sbGet('menu_items');
+  const items = (data && data.length > 0) ? data : menuItems;
+  sec.innerHTML = `
+    <div class="add-form">
+      <h3>➕ Naya Item Add Karo</h3>
+      <div class="form-row" style="margin-bottom:8px;">
+        <input class="form-input" id="newName" placeholder="Item Name *">
+        <input class="form-input" id="newCat" placeholder="Category *">
+      </div>
+      <input class="form-input" id="newDesc" placeholder="Description" style="margin-bottom:8px;">
+      <div class="form-row" style="margin-bottom:8px;">
+        <input class="form-input" id="newPrice" placeholder="Price ₹ *" type="number">
+        <input class="form-input" id="newOldPrice" placeholder="Old Price (optional)" type="number">
+      </div>
+      <div class="form-row" style="margin-bottom:8px;">
+        <input class="form-input" id="newEmoji" placeholder="Emoji (e.g. ☕)">
+        <input class="form-input" id="newOffer" placeholder="Offer tag">
+      </div>
+      <div class="form-row" style="margin-bottom:10px;">
+        <select class="form-input" id="newVeg"><option value="veg">🟢 Veg</option><option value="nonveg">🔴 Non-Veg</option></select>
+        <select class="form-input" id="newSpecial"><option value="false">Normal</option><option value="true">⭐ Special</option></select>
+      </div>
+      <input type="file" id="newImgFile" accept="image/*" style="margin-bottom:10px;color:var(--muted);">
+      <button class="btn btn-gold" onclick="addMenuItem()">Add Item</button>
+    </div>
+    <div class="item-list">${items.map(item => `
+      <div class="item-row">
+        <div class="item-row-img">${item.image_url
+          ? `<img src="${item.image_url}" onerror="this.parentNode.innerHTML='${item.emoji||'🍽️'}'">` 
+          : (item.emoji || '🍽️')}</div>
+        <div class="item-row-info">
+          <strong>${item.name}</strong>
+          <span>₹${item.price} · ${item.category}</span>
+        </div>
+        <div class="item-row-actions">
+          <button class="icon-btn" onclick="openEdit(${item.id})">✏ Edit</button>
+          <button class="icon-btn del" onclick="deleteItem(${item.id})">🗑 Delete</button>
+        </div>
+      </div>`).join('')}
+    </div>`;
+}
+
+async function addMenuItem() {
+  const name = document.getElementById('newName').value.trim();
+  const category = document.getElementById('newCat').value.trim();
+  const price = parseInt(document.getElementById('newPrice').value);
+  if (!name || !category || !price) { showToast('Naam, Category aur Price zaroori hai!'); return; }
+  let image_url = null;
+  const file = document.getElementById('newImgFile').files[0];
+  if (file) image_url = await uploadImage(file);
+  const data = {
+    name,
+    description: document.getElementById('newDesc').value.trim(),
+    category,
+    price,
+    old_price: parseInt(document.getElementById('newOldPrice').value) || null,
+    emoji: document.getElementById('newEmoji').value.trim() || '🍽️',
+    offer_tag: document.getElementById('newOffer').value.trim() || null,
+    veg: document.getElementById('newVeg').value,
+    special: document.getElementById('newSpecial').value === 'true',
+    image_url
+  };
+  const result = await sbInsert('menu_items', data);
+  if (result) {
+    showToast('Item add ho gaya! ✅');
+    await loadMenu();
+    loadAdminItems();
+  } else {
+    // Demo mode mein locally add karo
+    const newId = Math.max(...menuItems.map(i => i.id), 0) + 1;
+    menuItems.push({...data, id: newId});
+    showToast('Item locally add ho gaya! (Supabase connect karein)');
+    renderMenu();
+    loadAdminItems();
+  }
+}
+
+async function deleteItem(id) {
+  if (!confirm('Yeh item delete karna chahte ho?')) return;
+  await sbDelete('menu_items', id);
+  menuItems = menuItems.filter(i => i.id !== id);
+  showToast('Item delete ho gaya!');
+  renderMenu();
+  loadAdminItems();
+}
+
+function openEdit(id) {
+  const item = menuItems.find(i => i.id === id);
+  if (!item) return;
+  currentEditId = id;
+  editImgFile = null;
+  document.getElementById('editName').value = item.name || '';
+  document.getElementById('editDesc').value = item.description || '';
+  document.getElementById('editPrice').value = item.price || '';
+  document.getElementById('editOldPrice').value = item.old_price || '';
+  document.getElementById('editOffer').value = item.offer_tag || '';
+  document.getElementById('editCategory').value = item.category || '';
+  document.getElementById('editVeg').value = item.veg || 'veg';
+  document.getElementById('editSpecial').value = item.special ? 'true' : 'false';
+  const prev = document.getElementById('editImgPreview');
+  prev.innerHTML = item.image_url ? `<img src="${item.image_url}">` : (item.emoji || '📷');
+  document.getElementById('editModal').classList.add('open');
+}
+
+function closeEdit() {
+  document.getElementById('editModal').classList.remove('open');
+  currentEditId = null;
+}
+
+function previewEditImg(input) {
+  editImgFile = input.files[0];
+  if (editImgFile) {
+    const reader = new FileReader();
+    reader.onload = e => {
+      document.getElementById('editImgPreview').innerHTML = `<img src="${e.target.result}">`;
+    };
+    reader.readAsDataURL(editImgFile);
+  }
+}
+
+async function saveEdit() {
+  if (!currentEditId) return;
+  let image_url = menuItems.find(i => i.id === currentEditId)?.image_url || null;
+  if (editImgFile) image_url = await uploadImage(editImgFile) || image_url;
+  const data = {
+    name: document.getElementById('editName').value.trim(),
+    description: document.getElementById('editDesc').value.trim(),
+    price: parseInt(document.getElementById('editPrice').value),
+    old_price: parseInt(document.getElementById('editOldPrice').value) || null,
+    offer_tag: document.getElementById('editOffer').value.trim() || null,
+    category: document.getElementById('editCategory').value.trim(),
+    veg: document.getElementById('editVeg').value,
+    special: document.getElementById('editSpecial').value === 'true',
+    image_url
+  };
+  await sbUpdate('menu_items', currentEditId, data);
+  const idx = menuItems.findIndex(i => i.id === currentEditId);
+  if (idx >= 0) menuItems[idx] = {...menuItems[idx], ...data};
+  showToast('Item update ho gaya! ✅');
+  closeEdit();
+  renderMenu();
+  loadAdminItems();
+}
+
+async function loadAdminOrders() {
+  const sec = document.getElementById('adminTab_orders');
+  sec.innerHTML = '<div class="loading"><div class="spinner"></div></div>';
+  const data = await sbGet('orders');
+  if (!data || data.length === 0) {
+    sec.innerHTML = '<p style="color:var(--muted);">Abhi tak koi orders nahi.</p>';
+    return;
+  }
+  const statusOptions = ['pending','confirmed','preparing','out_for_delivery','delivered','cancelled'];
+  sec.innerHTML = data.reverse().map(o => {
+    let items = [];
+    try { items = JSON.parse(o.items); } catch(e) {}
+    return `<div class="order-hist-card" style="margin-bottom:10px;">
+      <div class="order-hist-header">
+        <div>
+          <strong>Order #${o.id} — ${o.customer_name}</strong>
+          <div style="font-size:12px;color:var(--muted);">${o.phone} · ${new Date(o.created_at).toLocaleString('hi-IN')}</div>
+          <div style="font-size:12px;color:#bbb;margin-top:2px;">${items.map(i => i.name + '×' + i.qty).join(', ')}</div>
+        </div>
+        <div>
+          <div style="font-size:15px;font-weight:700;color:var(--gold);">₹${o.total}</div>
+          <select onchange="updateOrderStatus(${o.id},this.value)" style="background:var(--card);border:1px solid var(--border);color:var(--text);padding:4px 8px;border-radius:6px;font-size:12px;margin-top:4px;">
+            ${statusOptions.map(s => `<option value="${s}" ${o.status===s?'selected':''}>${s}</option>`).join('')}
+          </select>
+        </div>
+      </div>
+      ${o.address ? `<div style="font-size:12px;color:var(--muted);">📍 ${o.address}</div>` : ''}
+    </div>`;
+  }).join('');
+}
+
+async function updateOrderStatus(id, status) {
+  await sbUpdate('orders', id, {status});
+  showToast('Status update ho gaya!');
+}
+
+function renderAdminOffers() {
+  const sec = document.getElementById('adminTab_offers');
+  sec.innerHTML = `
+    <div class="add-form">
+      <h3>➕ Naya Offer Add Karo</h3>
+      <input class="form-input" id="newOfferTag" placeholder="Tag (e.g. TODAY ONLY)" style="margin-bottom:8px;">
+      <input class="form-input" id="newOfferTitle" placeholder="Title *" style="margin-bottom:8px;">
+      <textarea class="form-input" id="newOfferDesc" placeholder="Description" rows="2" style="margin-bottom:8px;resize:vertical;"></textarea>
+      <input class="form-input" id="newOfferValidity" placeholder="Validity" style="margin-bottom:10px;">
+      <button class="btn btn-gold" onclick="addOffer()">Add Offer</button>
+    </div>
+    <div class="item-list">${offers.map(o => `
+      <div class="item-row">
+        <div class="item-row-info" style="flex:1;">
+          <strong>${o.title}</strong>
+          <span>${o.tag} · ${o.validity}</span>
+        </div>
+        <button class="icon-btn del" onclick="deleteOffer(${o.id})">🗑</button>
+      </div>`).join('')}
+    </div>`;
+}
+
+function addOffer() {
+  const title = document.getElementById('newOfferTitle').value.trim();
+  if (!title) { showToast('Title zaroori hai!'); return; }
+  const newOffer = {
+    id: Date.now(),
+    tag: document.getElementById('newOfferTag').value.trim() || 'OFFER',
+    title,
+    desc: document.getElementById('newOfferDesc').value.trim(),
+    validity: document.getElementById('newOfferValidity').value.trim() || 'Limited time'
+  };
+  offers.push(newOffer);
+  saveOffers();
+  renderOffers();
+  renderAdminOffers();
+  showToast('Offer add ho gaya!');
+}
+
+function deleteOffer(id) {
+  offers = offers.filter(o => o.id !== id);
+  saveOffers();
+  renderOffers();
+  renderAdminOffers();
+  showToast('Offer delete ho gaya!');
+}
+
+function renderAdminSettings() {
+  const sec = document.getElementById('adminTab_settings');
+  sec.innerHTML = `
+    <div class="add-form">
+      <h3>🏪 Café Settings</h3>
+      <input class="form-input" id="sCafeName" value="${settings.cafeName}" placeholder="Café Name" style="margin-bottom:8px;">
+      <input class="form-input" id="sCafeTagline" value="${settings.cafeTagline}" placeholder="Tagline" style="margin-bottom:8px;">
+      <input class="form-input" id="sWaNum" value="${settings.waNumber}" placeholder="WhatsApp Number (with country code)" style="margin-bottom:8px;">
+      <input class="form-input" id="sUpiId" value="${settings.upiId}" placeholder="UPI ID" style="margin-bottom:8px;">
+      <textarea class="form-input" id="sLocation" rows="3" placeholder="Address" style="margin-bottom:8px;resize:vertical;">${settings.location}</textarea>
+      <input class="form-input" id="sMapsLink" value="${settings.mapsLink}" placeholder="Google Maps Link" style="margin-bottom:8px;">
+      <textarea class="form-input" id="sHours" rows="4" placeholder="Hours" style="margin-bottom:8px;resize:vertical;">${settings.hours}</textarea>
+      <textarea class="form-input" id="sOfferBanner" rows="2" placeholder="Banner text (| se alag karo)" style="margin-bottom:8px;resize:vertical;">${settings.offerBanner}</textarea>
+      <label style="display:flex;align-items:center;gap:8px;margin-bottom:14px;font-size:13px;cursor:pointer;">
+        <input type="checkbox" id="sShowBanner" ${settings.showBanner?'checked':''}>
+        <span>Show Offer Banner</span>
+      </label>
+      <button class="btn btn-gold" onclick="saveAdminSettings()">💾 Save Settings</button>
+    </div>`;
+}
+
+function saveAdminSettings() {
+  settings.cafeName = document.getElementById('sCafeName').value.trim();
+  settings.cafeTagline = document.getElementById('sCafeTagline').value.trim();
+  settings.waNumber = document.getElementById('sWaNum').value.trim();
+  settings.upiId = document.getElementById('sUpiId').value.trim();
+  settings.location = document.getElementById('sLocation').value;
+  settings.mapsLink = document.getElementById('sMapsLink').value.trim();
+  settings.hours = document.getElementById('sHours').value;
+  settings.offerBanner = document.getElementById('sOfferBanner').value;
+  settings.showBanner = document.getElementById('sShowBanner').checked;
+  saveSettings();
+  applySettings();
+  showToast('Settings save ho gayi! ✅');
+}
+
+// ============================================================
+// INIT
+// ============================================================
+function init() {
+  applySettings();
+  loadWeather();
+  loadMenu();
+  renderOffers();
+  loadReviews();
+  drawWheel();
+
+  // Reset spin daily
+  const today = new Date().toDateString();
+  if (localStorage.getItem('spinDate') !== today) {
+    localStorage.setItem('spinDate', today);
+    localStorage.removeItem('spinUsed');
+    spinUsed = false;
+    const btn = document.getElementById('spinBtn');
+    if (btn) { btn.disabled = false; btn.textContent = '🎰 SPIN KARO!'; }
+  }
+}
+
+document.addEventListener('DOMContentLoaded', init);
+</script>
+</body>
+</html>
